@@ -1,0 +1,17 @@
+name: AdminKit
+version: ${project.version}
+main: hu.adminkit.AdminKitPlugin
+api-version: "1.21"
+description: Claimelheto admin kit
+commands:
+  adminkit:
+    description: Admin kit claimelese
+    usage: /adminkit [claim|reset <jatekos>|reload]
+    aliases: [akit]
+permissions:
+  adminkit.claim:
+    description: Claimelheti az admin kitet
+    default: op
+  adminkit.admin:
+    description: Reset / reload parancsok
+    default: op

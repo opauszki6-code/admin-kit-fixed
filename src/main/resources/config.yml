@@ -1,0 +1,78 @@
+messages:
+  prefix: "&8[&bAdminKit&8] "
+  claimed: "&aSikeresen megkaptad az admin kitet!"
+  cooldown: "&cMar claimelted az admin kitet! Kovetkezo claim: &f%time%&c mulva."
+  no-permission: "&cNincs jogod ehhez."
+  inventory-full: "&eNem fert minden a taskadba, a maradek a foldre esett."
+  reset-done: "&aA(z) &f%player% &akitje visszaallitva."
+  reset-not-found: "&cNem talalhato jatekos: &f%player%"
+  reloaded: "&aConfig ujratoltve."
+
+# Mennyi ido (oraban) utan claimelheti ujra a kitet. Lehet tort is, pl. 0.5
+cooldown-hours: 24
+
+# Automatikusan felveszi a pancelt, ha a slot ures
+equip-armor: true
+
+# A kit tartalma.
+#   slot / slots : hova keruljon (0-8 hotbar, 9-35 taska, 40 masik kez)
+#                  ha nincs megadva, az elso szabad helyre megy
+#   enchants     : "enchant_nev:szint"
+#   trim         : pancel trim (pattern + material)
+#   potion       : potion tipus (pl. strong_swiftness, strong_healing)
+#
+# Taska elrendezes:
+#   hotbar: 0-8 | felso sor: 9-17 | kozepso sor: 18-26 | also sor: 27-35
+items:
+  # --- Pancel ---
+  - material: NETHERITE_HELMET
+    trim: {pattern: sentry, material: diamond}
+    enchants: ["protection:5", "unbreaking:5", "mending:1", "respiration:3", "aqua_affinity:1"]
+  - material: NETHERITE_CHESTPLATE
+    trim: {pattern: sentry, material: diamond}
+    enchants: ["protection:5", "unbreaking:5", "mending:1"]
+  - material: NETHERITE_LEGGINGS
+    trim: {pattern: sentry, material: diamond}
+    enchants: ["protection:5", "unbreaking:5", "mending:1", "swift_sneak:3"]
+  - material: NETHERITE_BOOTS
+    trim: {pattern: sentry, material: diamond}
+    enchants: ["protection:5", "unbreaking:5", "mending:1", "feather_falling:4", "depth_strider:3"]
+
+  # --- Hotbar ---
+  - material: NETHERITE_SWORD
+    slot: 0
+    enchants: ["sharpness:7", "unbreaking:5", "mending:1", "looting:5", "fire_aspect:2", "sweeping_edge:3"]
+  - material: NETHERITE_PICKAXE
+    slot: 1
+    enchants: ["efficiency:10", "unbreaking:5", "mending:1", "fortune:5"]
+  - material: COOKED_BEEF
+    slot: 2
+    amount: 45
+  - material: ENCHANTED_GOLDEN_APPLE
+    slot: 3
+    amount: 64
+  - material: END_CRYSTAL
+    slot: 4
+    amount: 64
+  - material: OBSIDIAN
+    slot: 5
+    amount: 39
+  - material: FIREWORK_ROCKET
+    slot: 6
+    amount: 24
+  - material: ELYTRA
+    slot: 7
+    enchants: ["unbreaking:5", "mending:1"]
+  - material: TRIDENT
+    slot: 8
+    enchants: ["unbreaking:5", "mending:1", "loyalty:3", "impaling:5"]
+
+  # --- Masik kez + taska ---
+  - material: TOTEM_OF_UNDYING
+    slots: [40, 9, 10, 11, 12, 13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35]
+  - material: SPLASH_POTION
+    potion: strong_swiftness
+    slots: [16, 17]
+  - material: FIREWORK_ROCKET
+    slot: 33
+    amount: 64
